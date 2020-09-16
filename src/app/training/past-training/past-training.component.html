@@ -13,7 +13,7 @@
       Date
     </mat-header-cell>
     <mat-cell *matCellDef="let element">
-      {{ element.date | date }}
+      {{ element.date.toDate() | date }}
     </mat-cell>
   </ng-container>
 
@@ -57,6 +57,6 @@
   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 </mat-table>
 
-<mat-paginator [pageSize]="1"
+<mat-paginator [pageSize]="5"
                [pageSizeOptions]="[1, 5, 10, 25, 100]">
 </mat-paginator>
