@@ -24,16 +24,12 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import {UiService} from './shared/ui.service';
+import {AuthModule} from './auth/auth.module';
+import {TrainingModule} from './training/training.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
-    LoginComponent,
-    TrainingComponent,
-    CurrentTrainingComponent,
-    NewTrainingComponent,
-    PastTrainingComponent,
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
@@ -45,11 +41,8 @@ import {UiService} from './shared/ui.service';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    AngularFireAuthModule
+    AuthModule,
+    TrainingModule
   ],
   providers: [AuthService, TrainingService, UiService],
   bootstrap: [AppComponent],
