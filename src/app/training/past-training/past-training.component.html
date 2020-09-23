@@ -13,7 +13,7 @@
       Date
     </mat-header-cell>
     <mat-cell *matCellDef="let element">
-      {{ element.date.toDate() | date }}
+      {{ element.date.seconds * 1000 | date}}
     </mat-cell>
   </ng-container>
 
