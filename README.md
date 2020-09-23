@@ -1,47 +1,28 @@
-# F
+#Fitapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20. <br/>
 
-## Development server
+Built with Max Schwarzmueller's tutorial: <br/>
+https://www.udemy.com/course/angular-full-app-with-angular-material-angularfire-ngrx/ <br/>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Angular web application for tracking your workout-progress. <br/>
+The website has a connection to a Firebase backend with an implemented user registration and authentication functionality. <br/>
+Exercises are stored in a key-value database: Firestore. <br/>
+Frontend is responsive and dynamically changes dependent on the screen size: achieved with Angular Material library. <br/>
+Practice of using observables, NgRx for state management and splitting up the application into modules for better maintainability.
 
 
-# tasks-frontend
+![alt text](https://github.com/szymonstuszek/angular-fitness-tracker/blob/master/src/assets/fitapp1.PNG)
+![alt text](https://github.com/szymonstuszek/angular-fitness-tracker/blob/master/src/assets/fitapp2.PNG)
 
-Frontend part of the app built during the Kodilla bootcamp. <br/>
-Add tasks, update them and create cards on trello.
+http://angular-fitness-tracker-simonstk.s3-website.eu-central-1.amazonaws.com/
 
-Backend deployed on heroku.
-During the first opening of the link to the website,
-it might take a few moments for the backend to run.
-
-![alt text](https://github.com/szymonstuszek/kodilla-rest/blob/master/src/main/resources/screens/task1.PNG)
-![alt text](https://github.com/szymonstuszek/kodilla-rest/blob/master/src/main/resources/screens/task4.PNG)
-
-https://szymonstuszek.github.io/tasks-frontend/
-
-## Techonologies:
- - Javascript
+## Techonologies and libraries:
+ - Typescript
+ - Firebase authentication
+ - Firestore
+ - Angular Material
+ - NgRx
+ - NPM
  - CSS
  - HTML
