@@ -11,14 +11,7 @@ import * as Training from './training.actions';
 
 @Injectable()
 export class TrainingService {
-  exerciseChanged = new Subject<Exercise>();
-  exercisesChanged = new Subject<Exercise[]>();
-  finishedExercisedChanged = new Subject<Exercise[]>();
   private firebaseSubscriptions: Subscription[] = [];
-
-  private availableExercises: Exercise[] = [];
-
-  private runningExercise: Exercise;
 
   constructor(private db: AngularFirestore,
               private uiService: UiService,
@@ -45,12 +38,10 @@ export class TrainingService {
       }, error => {
         this.store.dispatch(new UI.StopLoading());
         this.uiService.showSnackbar('Fetching exercises failed, please try again later.', null, 3000);
-        this.exercisesChanged.next(null);
       }));
   }
 
   startExercise(selectedId: string) {
-    this.runningExercise = this.availableExercises.find(exercise => exercise.id === selectedId);
     this.store.dispatch(new Training.StartTraining(selectedId));
   }
 

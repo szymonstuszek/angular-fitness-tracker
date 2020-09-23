@@ -7,7 +7,7 @@ import {take} from 'rxjs/operators';
 @Injectable()
 export class AuthGuard implements CanActivate, CanLoad {
 
-  constructor(private store: Store<fromRoot.State>, private router: Router) {}
+  constructor(private store: Store<fromRoot.State>) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return this.store.select(fromRoot.getIsAuthenticated).pipe(take(1));
